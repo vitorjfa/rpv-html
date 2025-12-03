@@ -1,0 +1,50 @@
+* {
+    /* RESET CSS */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    /* Define 4 colunas de largura igual para menu-left, content, content, menu-right */
+    grid-template-columns: 1fr 2fr 2fr 1fr; /* Exemplo: 1fr para os menus laterais e 2fr para o conteúdo */
+    grid-template-rows: repeat(12, 1fr); /* Mantém 12 linhas */
+
+    grid-template-areas: 
+    "header header header header"
+    "header header header header"
+    "header header header header"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right"
+    "menu-left timeline timeline menu-right";
+}
+
+
+#header { 
+    grid-area: header; 
+    background-color: red;
+}
+
+#menu-left{
+    grid-area: menu-left;
+    background-color: green;
+}
+
+#content{
+    grid-area: timeline;
+    background-color: yellow;
+}
+
+#menu-right{
+    grid-area: menu-right;
+    background-color: blue;
+}
